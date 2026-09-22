@@ -1,0 +1,21 @@
+[project]
+name = "robloxstats"
+version = "0.1.0"
+description = "Local Roblox desktop playtime tracking, statistics, and weekly email reports"
+readme = "README.md"
+authors = [
+    { name = "kkyian", email = "kkyian@icloud.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "psutil>=7.2.2",
+    "resend>=2.47.0",
+    "tzdata>=2026.4",
+]
+
+[project.scripts]
+robloxstats = "robloxstats:main"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"

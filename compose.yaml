@@ -1,0 +1,13 @@
+services:
+  tests:
+    build:
+      context: .
+      target: test
+    network_mode: none
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
